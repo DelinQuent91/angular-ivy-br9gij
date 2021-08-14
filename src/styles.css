@@ -1,0 +1,9 @@
+/* Add application styles & imports to this file! */
+body {
+  margin: 0px;
+  text-align: center;}
+  button {background-color:orange;
+    border-radius: 20px;
+    padding: 5px;
+    border: red 2px solid;
+    margin-top: 10px;}

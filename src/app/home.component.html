@@ -1,0 +1,35 @@
+<hello name="{{ team }}"></hello>
+<img src="{{imgLogo}}"/>
+<hr>
+<div class="roast">
+<div>
+  <h3>Тренер команды {{team}}</h3>
+  <div *ngIf="coach">
+    <img src="{{coach1}}"/><br>
+    <span>Илья Воробьев</span>
+  </div>
+  <div *ngIf="!coach">
+    <img src="{{coach2}}"/><br>
+    <span>Майк Пелино</span>
+  </div>  
+  <button (click)="toggle()">Заменить тренера</button>
+</div>
+<div>
+  <ul>
+    <h3>Состав команды {{team}}</h3>
+    <li *ngFor="let item of roaster;">{{item}}</li>
+  </ul>
+  <h4>Добавить игроков в основной состав</h4> 
+  <button (click)="addPlayer()">{{player1}}</button>
+  <button (click)="addPlayer2()">{{player2}}</button>
+  <button (click)="addPlayer3()">{{player3}}</button>
+</div>
+</div>
+<hr>
+<h4>Сколько раз {{team}} становился чемпионом России?</h4>
+<input [(ngModel)]="cups"/>
+<div [ngSwitch]="cups">
+<span class="ok" *ngSwitchCase="5">Верный ответ</span>
+<span *ngSwitchCase="">Введите вариант</span>
+<span class="bad" *ngSwitchDefault>Ответ не верный</span>
+<div>

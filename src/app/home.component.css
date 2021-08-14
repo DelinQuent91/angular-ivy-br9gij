@@ -1,0 +1,11 @@
+img {
+  height: 200px;}
+.roast {display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+.bad {color: red;}
+.ok {color: green;}
+
+input {border: orange 2px solid;}
